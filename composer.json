@@ -1,0 +1,44 @@
+{
+  "name": "module/project",
+  "description": "modules-project",
+  "authors": [
+    {
+      "name": "Pavel Sidorenko",
+      "email": "sidorenkopavelmail@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Sp\\Editor\\": "local/modules/sp.editor/lib"
+    }
+  },
+  "extra": {
+    "installer-paths": {
+      "local/modules/{$name}/": [
+        "type:bitrix-module"
+      ]
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    },
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "require": {
+    "php": ">=7.4",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "ext-mbstring": "*",
+    "andreyryabin/sprint.migration": "dev-master",
+    "rakit/validation": "^1.4",
+    "paquettg/php-html-parser": "^3.0.1",
+    "phpoffice/phpspreadsheet": "1.18.0"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "^1.9"
+  }
+}
